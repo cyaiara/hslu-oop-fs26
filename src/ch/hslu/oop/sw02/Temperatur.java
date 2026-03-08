@@ -1,44 +1,48 @@
 package ch.hslu.oop.sw02;
 
 public class Temperatur {
-    private double celsius;
-    private double fahrenheit;
-    private double kelvin;
+    private float celsius; //this immer wenn zugriff auf attribut // wert kann auch hier sschon festgelegt werden
+    private float fahrenheit;
+    private float kelvin;
 
-    //public Temperatur(){
-      //this.celsius = celsius;
-    //}
+    public Temperatur(float celsius){
+      this.celsius = celsius;
+    }
 
-    public void setTempCelsius(double celsius){
-      if (celsius > (- 273.15) && celsius < (726.85)){
-        this.celsius = celsius;
+    public Temperatur(){
+      this(20);
+    }
+
+    public void setTempCelsius(float celsius){
+      if (celsius > (- 273.15f) && celsius < (726.85f)){
+        this.celsius = celsius; 
       }
       else {
         System.out.println("Invalid Temperature");
       }
     }
 
-    public double getTempCelsius(){
+    public float getTempCelsius(){
       return this.celsius;
     }
 
-    public double getTempFahrenheit(){
-      fahrenheit = ((celsius * (9d/5d)) + 32);
-      return fahrenheit;
+    public float getTempFahrenheit(){
+      return celsius * 1.8f + 32f;
     }
 
-    public double getTempKelvin(){
-      kelvin = (celsius + 273.15);
-      return kelvin;
+    public float getTempKelvin(){
+      return celsius + 273.15;
     }
 
-    public double setTempChangeCelsius(double celsius){
-      if (celsius > (- 273.15) && celsius < (726.85)){
-        this.celsius = celsius;
-      }
-      else {
-        System.out.println("Invalid Temperature");
-      }
-      return this.celsius + celsius;
+    public void changeTempCelsius(float value){
+      celsius += value;
+    }
+
+    public void changeTempKelvin(float kelvin){
+      changeTempCelsius(kelvin);
+    }
+
+    public static void main(String[] args){
+      System.out.println("Program started:");
     }
 }

@@ -2,3 +2,9 @@
 *.jar
 .DS_Store
 .vscode/
+# macOS
+.DS_Store
+# PDF-Folien
+Folien/
+# Übungen
+Übungen/
