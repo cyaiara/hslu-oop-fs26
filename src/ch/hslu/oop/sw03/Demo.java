@@ -1,8 +1,8 @@
 package ch.hslu.oop.sw03;
 
 public class Demo {
-  private int a = 111;
-  private int b = 22;
+  private int a;
+  private int b;
 
   public Demo(int a, int b){
     this.a = a;
@@ -27,8 +27,21 @@ public class Demo {
     } else {
           return getMax2(a, b);
     }
+  }
 
+  public int arrMax(int[] arr) {
+    int max = arr[0];
+    for (int i = 1; i < arr.length; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+    }
+    return max;
+  }
 
+  public int getMax4(int a, int b, int c, int d){
+    int[] zahlen = {a, b, c, d};
+    return arrMax(zahlen);
   }
 
 
