@@ -13,5 +13,11 @@ public class Main {
         Point Point = new Point(10, 22);
         System.out.println(Point.getQuadrant(33, -11));
 
+        System.out.println(demo.getCount());
+        System.out.println(demo.getCount2());
+        System.out.println(demo.getCount3());
+
     }
+
+
 }

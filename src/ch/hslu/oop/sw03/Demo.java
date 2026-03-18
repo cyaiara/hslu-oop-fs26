@@ -44,6 +44,38 @@ public class Demo {
     return arrMax(zahlen);
   }
 
+  /**
+   * @return int
+   */
+  public int getCount(){
+    int maximum = 10;
+    for (int i = 1; i <= maximum; i++){
+      System.out.println(i);
+    }
+    return maximum;
+  }
+
+  /**
+   * @return int
+   */
+  public int getCount2(){
+    int maximum = 10;
+    while (int i = 1; i <= maximum; i++){
+      System.out.println(i);
+    }
+    return maximum;
+  }
+
+  /**
+  * @return int i to maximum
+  */
+  public int getCount3(){
+    int maximum = 10;
+    int i = 1;
+    do {System.out.println(i);
+    } while (i <= maximum);
+    return maximum;
+  }
 
 
 
