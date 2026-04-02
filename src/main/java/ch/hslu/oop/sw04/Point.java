@@ -1,15 +1,21 @@
 package ch.hslu.oop.sw04;
 
 public class Point {
-  public int x;
-  public int y;
-
+  private int x;
+  private int y;
 
   public Point(int x, int y){
     this.x = x;
     this.y = y;
   }
 
+  public int getX(){
+    return this.x;
+  }
+
+  public int getY(){
+    return this.y;
+  }
 
   // public String getQuadrant(int x, int y){
   //   if (x > 0 && y > 0){

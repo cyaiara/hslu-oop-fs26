@@ -18,12 +18,21 @@ public class Line {
   }
 
   public int getVectorX(){
-    int vx = endPoint.x - startPoint.x;
+    int vx = endPoint.getX() - startPoint.getX();
     return vx;
   }
 
-    public int getVectorY(){
-    int vy = endPoint.y - startPoint.y;
+  public int getVectorY(){
+    int vy = endPoint.getY() - startPoint.getY();
     return vy;
   }
+
+  public void setStartPoint(Point startPoint){
+    this.startPoint = startPoint;
+  }
+
+  public void setEndPoint(Point endPoint){
+    this.endPoint = endPoint;
+  }
+
 }
