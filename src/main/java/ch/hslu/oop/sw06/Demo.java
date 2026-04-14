@@ -1,4 +1,4 @@
-package ch.hslu.oop.sw03;
+package ch.hslu.oop.sw06;
 
 public class Demo {
   private int a;

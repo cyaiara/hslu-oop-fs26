@@ -15,7 +15,7 @@ public class Temperatur {
 
     public void setTempCelsius(float celsius){
       if (celsius > (- 273.15f) && celsius < (726.85f)){
-        this.celsius = celsius; 
+        this.celsius = celsius;
       }
       else {
         System.out.println("Invalid Temperature");
@@ -31,7 +31,7 @@ public class Temperatur {
     }
 
     public float getTempKelvin(){
-      return celsius + 273.15;
+      return (float) celsius + 273.15f;
     }
 
     public void changeTempCelsius(float value){

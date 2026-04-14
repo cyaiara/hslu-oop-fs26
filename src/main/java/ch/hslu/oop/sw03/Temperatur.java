@@ -30,7 +30,7 @@ public class Temperatur {
     }
 
     public float getTempKelvin(){
-      return celsius + 273.15f;
+      return (float) celsius + 273.15f;
     }
 
     public void changeTempCelsius(float value){
