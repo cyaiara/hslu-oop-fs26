@@ -2,7 +2,7 @@ package ch.hslu.oop.sw07;
 
 import java.util.Objects;
 
-public class Person {
+public class Person implements Comparable<Person> {
   private final long ID;
   private String Name;
   private String Firstname;
@@ -47,4 +47,8 @@ public class Person {
     return Objects.hash(this.ID);
   }
 
+  @Override
+  public int compareTo(Person other) {
+    return Long.compare(this.ID, other.ID);
+  }
 }
