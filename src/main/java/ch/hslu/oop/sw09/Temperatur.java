@@ -104,5 +104,4 @@ public final class Temperatur implements Comparable<Temperatur> {
     return "Temperatur[Celsius=" + this.celsius + ", Kelvin=" + getTempKelvin() + ", Fahrenheit=" + getTempFahrenheit() +"]";
   }
 
-
 }
