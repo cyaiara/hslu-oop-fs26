@@ -23,6 +23,8 @@ public class Lead extends Element {
                 ", zustand bei raumtemperatur=" + Aggregatszustand.SOLID +"}";
     }
 
+
+
     // @Override
     // public String toString(){
     //     return  "GIFTIG" +
