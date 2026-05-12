@@ -7,7 +7,16 @@ public class Auto implements PropertyChangeListener {
   private final Motor motor;
 
   public Auto(){
+    this.motor = new Motor(0);
+    this.motor.addPropertyChangeListener(this);
+  }
 
+  public void switchOn() {
+    this.motor.switchOn();
+  }
+
+  public void switchOff() {
+    this.motor.switchOff();
   }
 
   @Override

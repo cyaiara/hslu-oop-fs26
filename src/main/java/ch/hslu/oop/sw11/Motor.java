@@ -68,14 +68,16 @@ public final class Motor implements Switchable {
   * Registriert einen PropertyChangeListener(-Objekt) auf der Quelle. * @param listener PropertyChangeListener.
   */
   public void addPropertyChangeListener(final PropertyChangeListener listener) {
-  this.changeListeners.add(listener);
+    if (listener != null)
+      this.changeListeners.add(listener);
   }
 
   /**
   * Deregistriert einen PropertyChangeListener(-Objekt) von der Quelle. * @param listener PropertyChangeListener.
   */
   public void removePropertyChangeListener(final PropertyChangeListener listener) {
-  this.changeListeners.remove(listener);
+    if (listener != null)
+      this.changeListeners.remove(listener);
   }
 
   /**
