@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: ch.hslu.oop.sw10.TemperaturTest
+-------------------------------------------------------------------------------
+Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.263 s -- in ch.hslu.oop.sw10.TemperaturTest

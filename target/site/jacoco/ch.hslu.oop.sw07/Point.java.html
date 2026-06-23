@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Point.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">oop_maven_template</a> &gt; <a href="index.source.html" class="el_package">ch.hslu.oop.sw07</a> &gt; <span class="el_source">Point.java</span></div><h1>Point.java</h1><pre class="source lang-java linenums">package ch.hslu.oop.sw07;
+
+import java.util.Objects;
+
+public class Point {
+  private int x;
+  private int y;
+
+<span class="nc" id="L9">  public Point(int x, int y){</span>
+<span class="nc" id="L10">    this.x = x;</span>
+<span class="nc" id="L11">    this.y = y;</span>
+<span class="nc" id="L12">  }</span>
+
+  public int getX(){
+<span class="nc" id="L15">    return this.x;</span>
+  }
+
+  public int getY(){
+<span class="nc" id="L19">    return this.y;</span>
+  }
+
+  public void moveRelative(int x, int y){
+<span class="nc" id="L23">    this.x += x;</span>
+<span class="nc" id="L24">    this.y += y;</span>
+<span class="nc" id="L25">  }</span>
+
+  public void moveRelative(Point vector) {
+<span class="nc" id="L28">    this.moveRelative(vector.getX(), vector.getY());</span>
+<span class="nc" id="L29">  }</span>
+
+  public void moveRelativePolar(double angle, double betrag){
+<span class="nc" id="L32">    x = (int) (betrag * Math.cos(angle));</span>
+<span class="nc" id="L33">    y = (int) (betrag * Math.sin(angle));</span>
+<span class="nc" id="L34">  }</span>
+
+  // copy constructor
+<span class="nc" id="L37">  public Point(Point point){</span>
+<span class="nc" id="L38">    this.x = point.x;</span>
+<span class="nc" id="L39">    this.y = point.y;</span>
+<span class="nc" id="L40">  }</span>
+
+  @Override
+  public final boolean equals(final Object object){
+<span class="nc bnc" id="L44" title="All 2 branches missed.">    if (this == object) {</span>
+<span class="nc" id="L45">      return true;</span>
+    }
+<span class="nc bnc" id="L47" title="All 2 branches missed.">    if (!(object instanceof Point other)) {</span>
+<span class="nc" id="L48">      return false;</span>
+    }
+<span class="nc bnc" id="L50" title="All 4 branches missed.">    return (other.x == this.x &amp;&amp; other.y == this.y);</span>
+  }
+
+  @Override
+  public final int hashCode() {
+<span class="nc" id="L55">    return Objects.hash(this.x, this.y);</span>
+  }
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.14.202510111229</span></div></body></html>

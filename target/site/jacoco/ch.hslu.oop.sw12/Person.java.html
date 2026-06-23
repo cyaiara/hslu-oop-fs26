@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Person.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">oop_maven_template</a> &gt; <a href="index.source.html" class="el_package">ch.hslu.oop.sw12</a> &gt; <span class="el_source">Person.java</span></div><h1>Person.java</h1><pre class="source lang-java linenums">package ch.hslu.oop.sw12;
+
+import java.util.Objects;
+
+public class Person implements Comparable&lt;Person&gt; {
+  private final long ID;
+  private String Name;
+  private String Firstname;
+
+<span class="nc" id="L10">  public Person(final long ID, String Name, String Firstname){</span>
+<span class="nc" id="L11">    this.ID = ID;</span>
+<span class="nc" id="L12">    this.Name = Name;</span>
+<span class="nc" id="L13">    this.Firstname = Firstname;</span>
+<span class="nc" id="L14">  }</span>
+
+  public long getID(){
+<span class="nc" id="L17">    return this.ID;</span>
+  }
+
+  public String getName(){
+<span class="nc" id="L21">    return this.Name;</span>
+  }
+
+  public String getFirstname(){
+<span class="nc" id="L25">    return this.Firstname;</span>
+  }
+
+  @Override
+  public String toString(){
+<span class="nc" id="L30">    return &quot;Person[ID=&quot; + this.ID + &quot;, Name=&quot; + this.Name + &quot;, Firstname=&quot; + this.Firstname +&quot;]&quot;;</span>
+  }
+
+  /* Objektreferenzen identisch? */
+  @Override
+  public final boolean equals(final Object object){
+<span class="nc bnc" id="L36" title="All 2 branches missed.">    if (this == object) {</span>
+<span class="nc" id="L37">      return true;</span>
+    }
+<span class="nc bnc" id="L39" title="All 2 branches missed.">    if (!(object instanceof Person other)) {</span>
+<span class="nc" id="L40">      return false;</span>
+    }
+<span class="nc bnc" id="L42" title="All 2 branches missed.">    return (other.ID == this.ID);</span>
+  }
+
+  @Override
+  public final int hashCode() {
+<span class="nc" id="L47">    return Objects.hash(this.ID);</span>
+  }
+
+  @Override
+  public int compareTo(Person other) {
+<span class="nc" id="L52">    return Long.compare(this.ID, other.ID);</span>
+  }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.14.202510111229</span></div></body></html>

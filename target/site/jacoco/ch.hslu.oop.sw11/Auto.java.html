@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Auto.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">oop_maven_template</a> &gt; <a href="index.source.html" class="el_package">ch.hslu.oop.sw11</a> &gt; <span class="el_source">Auto.java</span></div><h1>Auto.java</h1><pre class="source lang-java linenums">package ch.hslu.oop.sw11;
+
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
+
+public class Auto implements PropertyChangeListener {
+  private final Motor motor;
+
+<span class="nc" id="L9">  public Auto(){</span>
+<span class="nc" id="L10">    this.motor = new Motor(0);</span>
+<span class="nc" id="L11">    this.motor.addPropertyChangeListener(this);</span>
+<span class="nc" id="L12">  }</span>
+
+  public void switchOn() {
+<span class="nc" id="L15">    this.motor.switchOn();</span>
+<span class="nc" id="L16">  }</span>
+
+  public void switchOff() {
+<span class="nc" id="L19">    this.motor.switchOff();</span>
+<span class="nc" id="L20">  }</span>
+
+  @Override
+  public void propertyChange(final PropertyChangeEvent event){
+<span class="nc" id="L24">    System.out.println(&quot;Motor Status geändert: &quot; + event.getNewValue());</span>
+<span class="nc" id="L25">  }</span>
+
+
+    // if (event.getSource() == this.motor) {
+    //   this.handleMotorEvent(&quot;Motor&quot;, event);
+    //   System.out.println(&quot;Status:&quot;, &quot;event.getNewValue()&quot;);
+    // }
+
+    // if (event.getSource() == this.lightFrontLeft) {
+    // this.handleLightEvent(&quot;Scheinwerfer Links&quot;, event); }
+    // if (event.getSource() == this.lightFrontRight) {
+    // this.handleLightEvent(&quot;Scheinwerfer Rechts&quot;, event); }
+  // }
+
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.14.202510111229</span></div></body></html>

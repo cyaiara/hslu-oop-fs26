@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Temperatur.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">oop_maven_template</a> &gt; <a href="index.source.html" class="el_package">ch.hslu.oop.sw07</a> &gt; <span class="el_source">Temperatur.java</span></div><h1>Temperatur.java</h1><pre class="source lang-java linenums">package ch.hslu.oop.sw07;
+
+import java.util.Objects;
+
+public class Temperatur {
+    private float celsius; //this immer wenn zugriff auf attribut // wert kann auch hier sschon festgelegt werden
+    private float fahrenheit;
+    private float kelvin;
+
+<span class="nc" id="L10">    public Temperatur(float celsius){</span>
+<span class="nc" id="L11">      this.celsius = celsius;</span>
+<span class="nc" id="L12">    }</span>
+
+    public Temperatur(){
+<span class="nc" id="L15">      this(20);</span>
+<span class="nc" id="L16">    }</span>
+    public void setTempCelsius(float celsius){
+<span class="nc bnc" id="L18" title="All 4 branches missed.">      if (celsius &gt; (- 273.15f) &amp;&amp; celsius &lt; (726.85f)){</span>
+<span class="nc" id="L19">        this.celsius = celsius;</span>
+      }
+      else {
+<span class="nc" id="L22">        System.out.println(&quot;Invalid Temperature&quot;);</span>
+      }
+<span class="nc" id="L24">    }</span>
+
+    public float getTempCelsius(){
+<span class="nc" id="L27">      return this.celsius;</span>
+    }
+
+    public float getTempFahrenheit(){
+<span class="nc" id="L31">      return celsius * 1.8f + 32f;</span>
+    }
+
+    public float getTempKelvin(){
+<span class="nc" id="L35">      return (float) celsius + 273.15f;</span>
+    }
+
+    public void changeTempCelsius(float value){
+<span class="nc" id="L39">      celsius += value;</span>
+<span class="nc" id="L40">    }</span>
+
+    public void changeTempKelvin(float kelvin){
+<span class="nc" id="L43">      changeTempCelsius(kelvin);</span>
+<span class="nc" id="L44">    }</span>
+
+    public String getAggregatzustand(String element){
+<span class="nc bnc" id="L47" title="All 4 branches missed.">      switch(element){</span>
+        case &quot;N&quot;:
+<span class="nc bnc" id="L49" title="All 2 branches missed.">          if (celsius &lt;= -195.8f) return &quot;flüssig&quot;;</span>
+<span class="nc bnc" id="L50" title="All 2 branches missed.">          if (celsius &lt;= -210f) return &quot;fest&quot;;</span>
+<span class="nc" id="L51">          return &quot;gasförmig&quot;;</span>
+        case &quot;Hg&quot;:
+<span class="nc bnc" id="L53" title="All 2 branches missed.">          if (celsius &gt;= 357f) return &quot;gasförmig&quot;;</span>
+<span class="nc bnc" id="L54" title="All 2 branches missed.">          if (celsius &lt;= -39f) return &quot;fest&quot;;</span>
+<span class="nc" id="L55">          return &quot;flüssig&quot;;</span>
+        case &quot;Pb&quot;:
+<span class="nc bnc" id="L57" title="All 2 branches missed.">          if (celsius &gt;= 1740f) return &quot;gasförmig&quot;;</span>
+<span class="nc bnc" id="L58" title="All 2 branches missed.">          if (celsius &gt;= 327f) return &quot;fest&quot;;</span>
+<span class="nc" id="L59">          return &quot;flüssig&quot;;</span>
+      }
+<span class="nc" id="L61">      return &quot;Invalid Element&quot;;</span>
+    }
+
+    public static void main(String[] args){
+<span class="nc" id="L65">      System.out.println(&quot;Program started:&quot;);</span>
+<span class="nc" id="L66">    }</span>
+
+  @Override
+  public final boolean equals(final Object object){
+<span class="nc bnc" id="L70" title="All 2 branches missed.">    if (this == object) {</span>
+<span class="nc" id="L71">      return true;</span>
+    }
+<span class="nc bnc" id="L73" title="All 2 branches missed.">    if (!(object instanceof Temperatur other)) {</span>
+<span class="nc" id="L74">      return false;</span>
+    }
+<span class="nc bnc" id="L76" title="All 2 branches missed.">    return Float.compare(this.celsius, other.celsius) == 0; //spezialfall wegen double und float</span>
+  }
+
+  @Override
+  public final int hashCode() {
+<span class="nc" id="L81">    return Objects.hash(this.celsius);</span>
+  }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.14.202510111229</span></div></body></html>
